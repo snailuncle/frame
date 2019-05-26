@@ -1,19 +1,20 @@
 //  //导入模块
-//  function 导入常用函数模块(){
-//   var url='https://raw.githubusercontent.com/snailuncle/frame/master/common.js'
-//   var r = http.get(url)
-//   log("code = " + r.statusCode);
-//   var html=r.body.bytes()
-//   files.write('./autojsCommonFunctions.js','')
-//   files.writeBytes('./autojsCommonFunctions.js',html)
-//   var common=require('./autojsCommonFunctions.js')
-//   return common
-// }
-// var common=导入常用函数模块()
-// log(common)
-// for(let i=0;i<33;i++){
-//   common.闪光弹('fire in the hole')
-// }
+//  function 导入常用函数模块() {
+//    var url = 'https://raw.githubusercontent.com/snailuncle/frame/master/common.js'
+//    var r = http.get(url)
+//    log("code = " + r.statusCode);
+//    var html = r.body.bytes()
+//    var commonFunctionPath = './common.js'
+//    files.write(commonFunctionPath, '')
+//    files.writeBytes(commonFunctionPath, html)
+//    var common = require(commonFunctionPath)
+//    return common
+//  }
+//  var common = 导入常用函数模块()
+//  log(common)
+//  for (let i = 0; i < 33; i++) {
+//    common.flash('fire in the hole')
+//  }
 
 var 是否打印日志 = false
 
@@ -702,3 +703,5 @@ common.deepCopy = deepCopy
 common.oppositeColor = oppositeColor
 common.dateToTimestamp = dateToTimestamp
 common.Command = Command
+
+module.exports=common
